@@ -1,0 +1,43 @@
+<!-- Estilos Css-->
+<style>
+    body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+    h1{
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }   
+    .centrado{
+        font-size:20px;
+        border: 2px solid;
+        width:800px;
+    }
+    .imagenes{
+        margin:auto;
+        width: 800px;
+        height: 800px;
+    }
+</style>
+
+<!-- Cabecera-->
+<h1>POLITICO</h1>
+<!-- Descripcion del problema-->
+<p class="centrado">Haz que cuando se pase el mouse por encima de la foto de un político aparezca maquillado y con labios pintados.</b></p>
+  
+<!--Codigo en JS -->
+<script>
+    window.onload = function(){
+        var img = document.getElementById("presidente");
+        img.addEventListener('mouseover',cambiar);
+        img.addEventListener('mouseout',volver);
+    
+        function cambiar(){
+            this.setAttribute('src',"imagenes/img2.jpeg");   
+        }    
+        function volver(){
+            this.setAttribute('src',"imagenes/img1.jpg");
+        }  
+    } 
+</script>    
+<p class="centrado">
+    <img id="presidente" class="imagenes" src="imagenes/img1.jpg"/>
+</p>
